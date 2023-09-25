@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import StringKit
+
 public let lighterYello = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 198.0/255.0, alpha: 1.0)
 
 public let darkGrey = UIColor(red: 127.0/255.0, green: 127.0/255.0, blue: 127.0/255.0, alpha: 1.0)

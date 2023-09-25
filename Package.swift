@@ -24,6 +24,6 @@ let package = Package(
             dependencies: []),
         .testTarget(
             name: "UIStringKitTests",
-            dependencies: ["UIStringKit"]),
+            dependencies: ["UIStringKit", "StringKit"]),
     ]
 )
