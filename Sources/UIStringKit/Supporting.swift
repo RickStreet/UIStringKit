@@ -19,6 +19,14 @@ public let lightBlue = UIColor(red: 134.0/255.0, green: 202.0/255.0, blue: 240.0
 public let pink = UIColor(red: 255.0/255.0, green: 231.0/255.0, blue: 235.0/255.0, alpha: 1.0)
 public let darkRed = UIColor(red: 137.0/255.0, green: 33.0/255.0, blue: 16.0/255.0, alpha: 1.0)
 public let navy = UIColor(red: 4.0/255.0, green: 30.0/255.0, blue: 141.0/255.0, alpha: 1.0)
+
+public let mediumBlue = UIColor(red: 149.0/255.0, green: 200.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+public let brightBlue = UIColor(red: 0.0/255.0, green: 4.0/255.0, blue: 236.0/255.0, alpha: 1.0)
+public let lapis = UIColor(red: 41.0/255.0, green: 50.0/255.0, blue: 186.0/255.0, alpha: 1.0)
+public let lightNavy = UIColor(red: 135.0/255.0, green: 155.0/255.0, blue: 181.0/255.0, alpha: 1.0)
+public let brightNavy = UIColor(red: 40.0/255.0, green: 86.0/255.0, blue: 183.0/255.0, alpha: 1.0)
+
+
 public let forestGreen = UIColor(red: 0.0/255.0, green: 153.0/255.0, blue: 76.0/255.0, alpha: 1.0)
 // public let black = NSColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
 public let black = UIColor.black
@@ -115,8 +123,17 @@ public var attributeSubtitle:  [NSAttributedString.Key: Any] = [
     .foregroundColor: black,
     .font: fontBoldItalicNormal]
 
+public var isDarkMode: Bool {
+    if UIApplication.shared.windows.first?.traitCollection.userInterfaceStyle == .dark {
+        return true
+    } else {
+        return false
+    }
+}
 
-
-// use superscriptRange and subscriptRange attributed string function
+@available(iOS 13.0, *)
+public var dynamicNavy: UIColor {
+    isDarkMode ? lightNavy : navy
+}
 
 
